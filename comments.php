@@ -13,8 +13,9 @@
 <?php
 
     /* This function below displays text */
-    echo "Hello Student";
-    echo "This is my change"
+    echo "Hello Student";    
+    echo "This is my change";
+
 
 
 
