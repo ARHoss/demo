@@ -14,7 +14,7 @@
 
     /* This function below displays text */
     echo "Hello Student";
-    echo "Hello"
+    echo "This is my change"
 
 
 
