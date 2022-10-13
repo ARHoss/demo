@@ -1,20 +1,10 @@
 
 <!-- the functions that bing files from db.php -->
-<?php include "db.php";
-
-// read values from database
-
-$query = "SELECT * FROM users";
-$result = mysqli_query($connection, $query);
+<?php include "db.php";?>
+<?php include "functions.php";?>
+<?php include "includes/header.php";?>
 
 
-// error message if query fails
-if(!$result){
-    die('Query Failed'.mysqli_error($connection));
-}
-
-
-?>
 
 
 
@@ -37,6 +27,7 @@ if(!$result){
     <main>
         <section>
             <article>
+                <h1 class="text-center">READ</h1>
                 
 
                 <!-- table too print values extracted from database using bootstrap -->
@@ -50,28 +41,7 @@ if(!$result){
                     </thead>
                     <tbody>
 
-                <?php
-
-                    $num = 0;
-                    while($row = mysqli_fetch_assoc($result)){
-
-                ?>
-
-
-
-                    <tr>
-                    <td><?php echo $row["id"]; ?></td>
-                    <td><?php echo $row["username"]; ?></td>
-                    <td><?php echo $row["password"]; ?></td>
-                    </tr>
-
-                <?php
-                        // print_r($row);
-                        
-
-                    }
-
-                ?>
+                    <?php readData();?>
                     </tbody>
                 </table>
                 
@@ -85,9 +55,5 @@ if(!$result){
 
 
     </main>
-    <footer></footer>
 
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-</body>
-</html>
+    <?php include "includes/footer.php";?>

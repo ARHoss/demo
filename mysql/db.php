@@ -1,6 +1,6 @@
 
 
-<?php include "../consolePrint.php";
+<?php include "consolePrint.php";
 
 
 // Database area
@@ -8,7 +8,7 @@
 
     if($connection){
         // Prints in to the console
-        debug_to_console("Connected");
+        // console_log("Connected");
         echo "Connected";
     }
 
