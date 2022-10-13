@@ -1,21 +1,13 @@
 
 <!-- Login -->
-<?php
+<!-- the functions that bing files from db.php -->
+<?php include "db.php";
 
 if(isset($_POST['submit'])){
     $username = $_POST['username'];
 
     $password = $_POST['password'];
 
-    // Database area
-    $connection = mysqli_connect('localhost', 'root', '', 'loginapp');
-
-    if($connection){
-
-        echo "Conneted";
-    }else{
-        echo "Die database connection failed";
-    }
 
     // insert values
     $query = "INSERT INTO users(username, password)";
@@ -26,6 +18,12 @@ if(isset($_POST['submit'])){
     if(!$result){
         die('Query Failed'.mysqli_error($connection));
     }
+
+
+
+    // Update
+
+    // Delete
 
     // Database area ends
 
