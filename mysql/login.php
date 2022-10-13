@@ -17,11 +17,18 @@ if(isset($_POST['submit'])){
         echo "Die database connection failed";
     }
 
+    // insert values
+    $query = "INSERT INTO users(username, password)";
+    $query .= "VALUES ('$username', '$password')";
 
+    $result = mysqli_query($connection, $query);
 
-    if($username && $password){
-
+    if(!$result){
+        die('Query Failed'.mysqli_error($connection));
     }
+
+    // Database area ends
+
 
 
     $name = ["Abdul@a.com", "Asif", "Faisal", "Himel"];
