@@ -39,7 +39,7 @@ if(!$result){
             <article>
                 
 
-                <!-- Loop to print values extracted from database -->
+                <!-- table too print values extracted from database using bootstrap -->
                 <table class="table">
                     <thead>
                         <tr>
@@ -75,7 +75,7 @@ if(!$result){
                     </tbody>
                 </table>
                 
-                <!-- Loop to print values extracted from database ends-->
+                <<!-- table too print values extracted from database using bootstrap ends-->
 
             </article>
         </section>

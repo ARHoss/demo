@@ -19,10 +19,6 @@ if(isset($_POST['submit'])){
         die('Query Failed'.mysqli_error($connection));
     }
 
-
-
-    // Update
-
     // Delete
 
     // Database area ends

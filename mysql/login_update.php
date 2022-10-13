@@ -1,8 +1,7 @@
 <!-- the functions that bing files from db.php -->
 <?php include "db.php";
 
-// updated values on database
-
+// read values on database
 $query = "SELECT * FROM users";
 $result = mysqli_query($connection, $query);
 
@@ -39,23 +38,45 @@ if(!$result){
             <article>
                 
 
-                <!-- login POST form using bootstrap-->
+                <!-- form to update values using bootstrap-->
                 <form action="mysql/login_insert.php" method="post">
                     <div class="mb-3">
-                        <label for="exampleInputtext1" class="form-label">ID</label>
-                        <input type="text" name="text" class="form-control" id="exampleInputtext1">
+                        <label for="ID" class="form-label">ID</label>
+                        <select name="id" id="" class="form-select form-select-sm" aria-label=".form-select-sm example">
+                            <option selected>Open this select menu</option>
+
+
+                                <!-- Loop to read values -->
+                                <?php 
+                                
+                                while($row = mysqli_fetch_assoc($result)){
+                                    $id = $row['id'];
+                                    echo "<option value='$id'>$id</option>";
+                                    
+                                }
+                                
+                                
+                                
+                                ?>
+                                <!-- Loop to read values ends-->
+                                
+                        </select>
                     </div>
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
-                        <span class="input-group-text" id="basic-addon2">@example.com</span>
+                    <div class="mb-3">
+                        <label for="Username" class="form-label">Username</label>
+
+                        <div class="input-group mb-3">
+                            <input type="text" name = "username" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                            <span class="input-group-text" id="basic-addon2">@example.com</span>
+                        </div>
                     </div>
                     <div class="mb-3">
                         <label for="exampleInputPassword1" class="form-label">Password</label>
                         <input type="password" name="password" class="form-control" id="exampleInputPassword1">
                     </div>
-                    <button type="submit" name="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" name="submit" class="btn btn-primary">Update</button>
                 </form>
-                <!-- login POST form using bootstrap ends-->
+                <!-- form to update values using bootstrap-->
 
                 
             </article>

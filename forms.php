@@ -20,9 +20,9 @@
             <article>
                 <!-- login POST form using bootstrap-->
                 <form action="mysql/login_insert.php" method="post">
-                    <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Email address</label>
-                        <input type="email" name="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <div class="input-group mb-3">
+                    <input type="text" name="username" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                    <span class="input-group-text" id="basic-addon2">@example.com</span>
                         <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
                     </div>
                     <div class="mb-3">
