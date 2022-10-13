@@ -30,22 +30,10 @@
                 <h1 class="text-center">READ</h1>
                 
 
-                <!-- table too print values extracted from database using bootstrap -->
-                <table class="table">
-                    <thead>
-                        <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Username</th>
-                        <th scope="col">Password</th>
-                        </tr>
-                    </thead>
-                    <tbody>
 
+                <pre>
                     <?php readData();?>
-                    </tbody>
-                </table>
-                
-                <<!-- table too print values extracted from database using bootstrap ends-->
+                </pre>
 
             </article>
         </section>
