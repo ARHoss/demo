@@ -1,7 +1,7 @@
 <?php include "db.php";
 
 
-// Print all data from PHP
+// Populating Select Menu
 function showAllData(){
     // read values on database
 
@@ -26,6 +26,7 @@ function showAllData(){
 
 }
 
+// Reading Data from database
 function readData(){
     
     // Allows global variables to be available inside fucntion
@@ -48,20 +49,8 @@ function readData(){
                     $num = 0;
                     while($row = mysqli_fetch_assoc($result)){
 
-                
-
-
-
-                    
-
-                    echo $row["id"];
-                    echo $row["username"];
-                    echo $row["password"];
-                    return $result;
-                    
-
-                
-                        // print_r($row);
+        
+                        print_r($row);
                         
 
                     }

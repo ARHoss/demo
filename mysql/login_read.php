@@ -12,25 +12,18 @@
 <body>
     <header></header>
     <main>
-        <section>
-            <article>
+        
+            
                 <h1 class="text-center">READ</h1>
                 
 
 
                 <pre>
-                    <?php $result = readData();
-                    
-                    
-                    
-                    
-                    
-                    
-                    ?>
+                    <?php $result = readData();?>
                 </pre>
 
-            </article>
-        </section>
+            
+        
 
 
 
