@@ -6,10 +6,6 @@
 
 
 
-
-
-
-<body>
     <header></header>
     <main>
         

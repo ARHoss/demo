@@ -44,9 +44,6 @@ function readData(){
     }
 
     
-    
-
-                    $num = 0;
                     while($row = mysqli_fetch_assoc($result)){
 
         
@@ -56,7 +53,6 @@ function readData(){
                     }
 
         
-
 }
 
     // Updating values
@@ -67,11 +63,17 @@ function updateData(){
         // Allows global variables to be available inside fucntion
         global $connection;
     
+        // Retreiving data from post
         $username = $_POST['username'];
-
         $password = $_POST['password'];
-
         $id = $_POST['id'];
+
+        // Sanitize data
+        $username = mysqli_real_escape_string($connection, $username);
+        $password = mysqli_real_escape_string($connection, $password);
+        $id = mysqli_real_escape_string($connection, $id);
+
+        
 
         echo $username." ".$password." ".$id;
 
@@ -101,9 +103,13 @@ function updateData(){
         // Allows global variables to be available inside fucntion
         global $connection;
 
+        // Retreiving data from post
         $username = $_POST['username'];
-
         $password = $_POST['password'];
+
+        // Sanitize data
+        $username = mysqli_real_escape_string($connection, $username);
+        $password = mysqli_real_escape_string($connection, $password);
 
         $id = $_POST['id'];
 
@@ -137,9 +143,20 @@ function insertData(){
         // Allows global variables to be available inside fucntion
         global $connection;
     
+        // Retreiving data from post
         $username = $_POST['username'];
-
         $password = $_POST['password'];
+
+        // Sanitize data
+        $username = mysqli_real_escape_string($connection, $username);
+        $password = mysqli_real_escape_string($connection, $password);
+
+        // Encryption
+        $hashFormat = "$2y$10$";
+        $salt = "iusesomecrazystrings22";
+        $hashF_and_salt = $hashFormat.$salt;
+        $password = crypt($password, $hashF_and_salt);
+
 
 
         // insert values
