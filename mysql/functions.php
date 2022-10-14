@@ -124,9 +124,8 @@ function updateData(){
 
 }
 
+// Create Data
 function insertData(){
-
-    
 
 
     // functions to insert data
@@ -185,6 +184,7 @@ function validateData(){
             }
 }
 
+// Prints in Console Port
 function console_print($data) {
     $output = $data;
     if (is_array($output))
