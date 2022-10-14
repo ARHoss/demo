@@ -1,8 +1,8 @@
 <!-- the functions that bring files from db.php -->
 <?php include "db.php";?>
 <?php include "functions.php";?>
-<?php updateData();?>
 <?php include "includes/header.php";?>
+<?php updateData();?>
 
 
 

@@ -3,7 +3,6 @@
 <?php include "functions.php";?>
 <?php include "includes/header.php";?>
 <?php deleteData();?>
-<?php include "includes/header.php";?>
 
 
 
