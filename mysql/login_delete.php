@@ -2,7 +2,8 @@
 <?php include "db.php";?>
 <?php include "functions.php";?>
 <?php include "includes/header.php";?>
-<?php updateData();?>
+<?php deleteData();?>
+
 
 
 
@@ -10,11 +11,11 @@
     <main>
         <section>
             <article>
-                <h1 class="text-center">Update</h1>
+                <h1 class="text-center">Delete</h1>
                 
 
                 <!-- form to update values using bootstrap-->
-                <form action="login_update.php" method="post">
+                <form action="login_delete.php" method="post">
                     <div class="mb-3">
                         <label for="ID" class="form-label">ID</label>
                         <select name="id" id="" class="form-select form-select-sm" aria-label=".form-select-sm example">
@@ -38,7 +39,7 @@
                         <label for="exampleInputPassword1" class="form-label">Password</label>
                         <input type="password" name="password" class="form-control" id="exampleInputPassword1">
                     </div>
-                    <button type="submit" name="submit" value="Update" class="btn btn-primary">Update</button>
+                    <button type="submit" name="submit" value="Delete" class="btn btn-primary">Delete</button>
                 </form>
                 <!-- form to update values using bootstrap-->
 
