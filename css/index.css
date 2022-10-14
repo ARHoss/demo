@@ -1,0 +1,78 @@
+/* importing font */
+@import url('https://fonts.googleapis.com/css2?family=Babylonica&family=Bebas+Neue&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+body {
+    /* Applying font */
+    font-family: 'Roboto Condensed', sans-serif;
+  
+    background: rgba(128, 128, 128, 0.5);
+    /* Text color */
+    color: #000;
+    /* !important has highes precedence unless mentioned Specifically*/
+    font-weight: 900 !important;
+    /* Connecting borders to the left and right of screen */
+    margin: 0px;
+  
+  
+}
+  
+/* Correction of error */
+body > header > h1 {
+    margin: 20px 30px;
+    position: absolute;
+    z-index: 2;
+}
+
+body header {
+    border-bottom: 2px solid black;
+  
+    /* Postions */
+    position: absolute;
+    background: rgba(255, 255, 255, 1.0);
+    width: 100%;
+    height: 80px;
+    top: 0px;
+}
+
+a {
+    cursor: pointer;
+}
+
+main{
+    position: relative;
+    top: 80px;
+}
+
+section {
+    width: 1000px;
+    margin: auto;
+    margin-top: 20px;
+    /* Improvisation */
+    margin-left: 5%;
+  
+}
+
+/* Varies depending on article */
+article {
+    max-width: 30%;
+    display: inline-block;
+    border: 1px solid black;
+    padding: 5px;
+    margin: 1px;
+    /* Transition */
+    transition: box-shadow 500ms, background 5s;
+  
+  
+}
+
+footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: red;
+    color: white;
+    text-align: center;
+}
+  
+  
