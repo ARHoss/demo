@@ -106,12 +106,14 @@ function updateData(){
         // Retreiving data from post
         $username = $_POST['username'];
         $password = $_POST['password'];
+        $id = $_POST['id'];
 
         // Sanitize data
         $username = mysqli_real_escape_string($connection, $username);
         $password = mysqli_real_escape_string($connection, $password);
+        $id= mysqli_real_escape_string($connection, $id);
 
-        $id = $_POST['id'];
+
 
         echo $username." ".$password." ".$id;
 
